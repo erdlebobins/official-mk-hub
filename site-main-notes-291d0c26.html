@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简明指南·竞彩网</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f8f5f0;
+            color: #2c2c2c;
+            font-family: 'Georgia', 'Times New Roman', '宋体', 'SimSun', serif;
+            line-height: 1.75;
+            padding: 2rem 1.2rem;
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .article-header {
+            margin: 2.4rem 0 1.2rem;
+            border-bottom: 1px solid #dad3cb;
+            padding-bottom: 0.8rem;
+        }
+        .article-header h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            color: #1f1a16;
+        }
+        .article-header .lead {
+            font-size: 1.08rem;
+            color: #5f554b;
+            margin-top: 0.5rem;
+            line-height: 1.6;
+        }
+        .meta-note {
+            font-size: 0.88rem;
+            color: #7b7066;
+            margin-bottom: 1.6rem;
+            font-style: italic;
+            border-left: 4px solid #cfc3b7;
+            padding-left: 1rem;
+            background: rgba(207, 195, 183, 0.12);
+            border-radius: 0 4px 4px 0;
+        }
+        p {
+            margin: 1.2rem 0;
+            text-indent: 2em;
+        }
+        p.no-indent {
+            text-indent: 0;
+        }
+        .pull-quote {
+            margin: 2rem 0;
+            padding: 1.2rem 1.6rem;
+            background: #ede7df;
+            border-left: 6px solid #b8a99a;
+            font-size: 1rem;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            color: #2e2823;
+        }
+        .pull-quote::before {
+            content: "💡";
+            margin-right: 0.5rem;
+            font-style: normal;
+        }
+        .callout-box {
+            background: #eae3da;
+            border: 1px solid #d6cdc1;
+            border-radius: 12px;
+            padding: 1.4rem 1.6rem;
+            margin: 2rem 0;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.03);
+        }
+        .callout-box h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            color: #201b16;
+            border-bottom: 1px dashed #cbbfb2;
+            padding-bottom: 0.3rem;
+        }
+        .callout-box p {
+            margin: 0.6rem 0;
+            text-indent: 0;
+        }
+        .feature-list {
+            list-style: none;
+            margin: 1.6rem 0;
+        }
+        .feature-list li {
+            padding: 0.5rem 0 0.5rem 1.8rem;
+            position: relative;
+            border-bottom: 1px dotted #ddd5cb;
+        }
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        .feature-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0.4rem;
+            font-weight: bold;
+            color: #8b7b6b;
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+        .faq-snip {
+            background: #f2ede7;
+            padding: 1.2rem 1.5rem;
+            border-radius: 10px;
+            margin: 1.8rem 0;
+        }
+        .faq-snip summary {
+            font-weight: 600;
+            cursor: default;
+            color: #2f2822;
+            font-size: 1.02rem;
+        }
+        .faq-snip .answer {
+            margin-top: 0.8rem;
+            padding-left: 0.5rem;
+            color: #3f372f;
+        }
+        .inline-link {
+            color: #6f523b;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: #c7b5a2;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .inline-link:hover {
+            color: #3d2d20;
+            text-decoration-color: #6f523b;
+        }
+        .exit-note {
+            margin-top: 2.8rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid #dbd2c7;
+            font-size: 0.94rem;
+            color: #5d5247;
+            text-align: center;
+        }
+        .exit-note a {
+            color: #5f4835;
+        }
+        @media (max-width: 540px) {
+            body {
+                padding: 1.2rem 0.9rem;
+            }
+            .article-header h1 {
+                font-size: 1.6rem;
+            }
+            .pull-quote {
+                padding: 1rem 1.2rem;
+            }
+            .callout-box {
+                padding: 1rem 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<article>
+    <div class="article-header">
+        <h1>竞彩入门·简明指南与访问须知</h1>
+        <div class="lead">从认知到操作，一份聚焦主线、避开噪音的速览手册。面向希望快速了解竞彩框架的理性读者。</div>
+    </div>
+
+    <div class="meta-note">
+        本文为独立介绍页，不构成投资建议。所有信息请以 <a href="https://site-main-jingcai.com" class="inline-link">竞彩网</a> 官方公示为准，实时规则以平台页面为准。
+    </div>
+
+    <p>
+        竞彩自诞生以来，逐步形成了一套以赛事结果为核心、赔率动态调节的标准化流程。对于新接触的用户而言，理解竞彩的基础逻辑比追逐短期信号更为重要。所谓“简明”，即剥离冗余信息，直接聚焦：赛事类型、赔率结构、出票截止时间及兑奖规则四大支柱。这四个维度构成了竞彩操作的稳定骨架，其余细节皆可在此基础上延展。
+    </p>
+
+    <p>
+        在实际操作前，建议先花十分钟浏览 <a href="https://site-main-jingcai.com" class="inline-link">竞彩网</a> 的“玩法说明”分区。该区块以表格形式清晰列示了胜平负、让球胜平负、比分、总进球数、半全场等主流玩法的赔付计算方式，并附有示例。很多常见疑问——例如“让球后的彩果如何判定”“比分玩法是否包含加时”——都可以在那里找到权威解释。提前阅读这些说明，能有效降低后期理解偏差。
+    </p>
+
+    <div class="pull-quote">
+        一个容易被忽略的细节：竞彩的赔率在投注确认前始终处于变动状态，最终中奖金额以票面打印时的赔率为准。因此，临场决策时应留意实时赔率，而非早盘参考值。
+    </div>
+
+    <p>
+        对于刚刚开始尝试的用户，建议从单场或 2-3 场串联的低关组合起步。低关串的容错空间虽然有限，但胜在逻辑清晰，易于复盘。每次投注前，不妨问自己三个问题：这场赛事的双方近期状态是否有明显倾斜？赔率变化是否反映了关键信息（如主力伤停、天气）？该玩法的期望值是否与自身判断匹配？这三个问题若能顺畅回答，便已超过了大量匆忙决策的参与者。
+    </p>
+
+    <div class="callout-box">
+        <h3>⏳ 访问与操作提醒</h3>
+        <p>由于竞彩采用固定销售时段，每日开售时间与停售时间均严格依照官方安排。周末及热门赛事日，部分场次可能提前停售，请预留出足够的时间完成选场与出票。此外，<a href="https://site-main-jingcai.com" class="inline-link">竞彩网</a> 提供完整的赛事赛程日历，并标注了每场比赛的截止销售时刻，建议养成赛前查阅的习惯。</p>
+        <p>若遇到页面加载延迟或数据更新卡顿，可先核对本地网络环境，同时留意官方公告——通常临时维护或紧急调整会通过首页公告栏告知。保持对官方渠道的关注，比追逐社交媒体的二手消息更为可靠。</p>
+    </div>
+
+    <h3 style="margin: 2rem 0 0.8rem; font-weight: 600; color: #2b231d; letter-spacing: 0.5px;">常见认知要点（FAQ 摘要）</h3>
+
+    <div class="faq-snip">
+        <summary>🔹 竞彩与外围盘口的核心区别是什么？</summary>
+        <div class="answer">竞彩的所有赛事、赔率与派奖均受国家体育总局体育彩票管理中心监管，数据公开透明，且奖池机制独立。外围平台则不受国内法律保护，存在资金与信息安全风险。选择合规渠道是参与的前提。</div>
+    </div>
+
+    <div class="faq-snip">
+        <summary>🔹 如何确认一张彩票是否中奖？</summary>
+        <div class="answer">可在 <a href="https://site-main-jingcai.com" class="inline-link">竞彩网</a> 的“开奖公告”栏目输入票面信息进行核对。注意：竞彩的“开奖”实际上等于赛事结束后的彩果公布，并非摇奖形式。所有结果均以赛事官方最终数据为准。</div>
+    </div>
+
+    <div class="faq-snip">
+        <summary>🔹 比赛延期或取消时如何处理？</summary>
+        <div class="answer">根据现行规则，若比赛在官方规定时间内未能完成，则该场竞彩结果按“无效场次”处理，涉及该场的串关按剩余场次计算。具体退款或重算方式在 <a href="https://site-main-jingcai.com" class="inline-link">竞彩网</a> 的“帮助”中有详细说明，建议遇到此类情况时直接查阅原文。</div>
+    </div>
+
+    <p style="margin-top: 2rem;">
+        最后，保持信息源的集中与简洁至关重要。竞彩领域信息庞杂，但高质量的信源非常有限。将 <a href="https://site-main-jingcai.com" class="inline-link">竞彩网</a> 作为主要的信息入口，辅以赛事官方数据，足以构建起一套自洽的认知闭环。不要轻信任何承诺“必中”或“稳赚”的话术——在竞彩的世界里，唯一确定的就是不确定性本身。
+    </p>
+
+    <div class="exit-note">
+        <p>© 本页为简洁介绍页 · 核心参考源：<a href="https://site-main-jingcai.com" style="text-decoration: underline; text-underline-offset: 3px;">竞彩网</a> · 请理性参考</p>
+    </div>
+
+</article>
+
+</body>
+</html>
