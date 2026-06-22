@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+  <title>竞彩网 · 产品说明与使用引导</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Helvetica Neue', sans-serif;
+      background-color: #f6f2ec; /* 米白基调 */
+      color: #2d2a26;
+      line-height: 1.7;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .page {
+      max-width: 820px;
+      width: 100%;
+      background: #fdfbf9;
+      border-radius: 28px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04), 0 1px 4px rgba(0, 0, 0, 0.02);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 520;
+      letter-spacing: -0.01em;
+      color: #3d352f;
+      margin-bottom: 0.5rem;
+      border-left: 6px solid #c9b8a6;
+      padding-left: 1.2rem;
+    }
+
+    .subhead {
+      color: #6b5f55;
+      font-size: 1rem;
+      margin-bottom: 2.5rem;
+      font-style: italic;
+      padding-left: 1.8rem;
+      border-bottom: 1px solid #e1d6cc;
+      padding-bottom: 0.8rem;
+    }
+
+    .summary {
+      background: #efe9e1;
+      padding: 1.8rem 1.8rem;
+      border-radius: 20px;
+      margin-bottom: 2.8rem;
+      font-size: 1.05rem;
+      box-shadow: inset 0 0 0 1px #ded3c7;
+    }
+
+    .summary strong {
+      color: #4f3f33;
+    }
+
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem 2rem;
+      margin: 2.5rem 0 2.2rem;
+    }
+
+    .feature-card {
+      flex: 1 1 200px;
+      background: #f8f4ef;
+      border-radius: 18px;
+      padding: 1.6rem 1.4rem;
+      border: 1px solid #e7ddd2;
+      transition: box-shadow 0.15s;
+    }
+
+    .feature-card h3 {
+      font-size: 1.2rem;
+      font-weight: 520;
+      margin-bottom: 0.6rem;
+      color: #4d3f34;
+      letter-spacing: 0.02em;
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+      color: #4e453d;
+    }
+
+    .quote-block {
+      background: #f3ede5;
+      padding: 1.2rem 1.8rem;
+      border-radius: 30px 12px 30px 12px;
+      margin: 2.2rem 0 2rem;
+      border-left: 4px solid #b7a48f;
+      font-size: 1rem;
+      color: #3e3933;
+    }
+
+    .quote-block cite {
+      display: block;
+      margin-top: 0.6rem;
+      font-size: 0.9rem;
+      color: #7c6d5f;
+      font-style: normal;
+    }
+
+    .scenario-wrap {
+      background: #faf7f2;
+      border-radius: 24px;
+      padding: 1.8rem 1.8rem;
+      margin: 2rem 0;
+      border: 1px dashed #cec0b0;
+    }
+
+    .scenario-wrap h2 {
+      font-weight: 500;
+      font-size: 1.3rem;
+      color: #3f352c;
+      border-bottom: 1px solid #d9cec0;
+      padding-bottom: 0.6rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .scenario-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .scenario-item .emoji-placeholder {
+      font-size: 1.5rem;
+      min-width: 2.2rem;
+      color: #a48e79;
+    }
+
+    .scenario-item p {
+      font-size: 0.98rem;
+    }
+
+    .faq-mini {
+      margin: 2.8rem 0 2rem;
+      border-top: 2px solid #e3d7ca;
+      padding-top: 2rem;
+    }
+
+    .faq-mini summary {
+      font-weight: 520;
+      color: #3f352c;
+      padding: 0.4rem 0;
+      cursor: default;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .faq-mini summary::before {
+      content: "▸";
+      color: #b09b87;
+      font-size: 1.2rem;
+    }
+
+    .faq-mini details[open] summary::before {
+      content: "▾";
+    }
+
+    .faq-mini details p {
+      margin: 0.5rem 0 1.2rem 1.8rem;
+      color: #4f443b;
+      font-size: 0.95rem;
+      background: #f3ede7;
+      padding: 0.8rem 1.2rem;
+      border-radius: 14px;
+    }
+
+    .access-note {
+      background: #e6ddd2;
+      padding: 1.4rem 1.8rem;
+      border-radius: 40px 12px 40px 12px;
+      display: inline-block;
+      margin: 1rem 0 1.8rem;
+      font-size: 0.98rem;
+      color: #302a24;
+    }
+
+    .inline-link {
+      color: #736351;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      font-weight: 500;
+    }
+
+    .inline-link:hover {
+      background: #e7d9cb;
+      color: #2d241c;
+      text-decoration-color: #a08b76;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #dccfc1;
+      margin: 2rem 0 0.8rem;
+    }
+
+    .footer-note {
+      font-size: 0.85rem;
+      color: #7e7368;
+      text-align: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e5d9cc;
+    }
+
+    @media (max-width: 520px) {
+      body {
+        padding: 1rem 0.6rem;
+      }
+      .page {
+        padding: 1.8rem 1rem;
+      }
+      h1 {
+        font-size: 1.7rem;
+        padding-left: 0.8rem;
+      }
+      .subhead {
+        padding-left: 1.2rem;
+      }
+      .feature-grid {
+        flex-direction: column;
+      }
+      .feature-card {
+        flex: 1 1 auto;
+      }
+      .scenario-item {
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>竞彩网 · 产品说明</h1>
+    <div class="subhead">从赛事信息聚合到独立判断 · 一份克制的使用参考</div>
+
+    <!-- 摘要：产品定位与背景 -->
+    <div class="summary">
+      <strong>竞彩网</strong> 并非一个简单的信息列表，而是一个围绕体育赛事与竞猜选项所构建的结构化平台。它呈现的内容核心是「赛事—玩法—数值」三者之间的组合关系，用户通过浏览不同场次与选项的公开数据，形成自己对比赛可能走向的认知。平台本身不提供策略生成或结果预测，所有信息均以客观展示为原则。
+    </div>
+
+    <!-- 亮点：三个产品特征（差异化的卡片） -->
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>多维度赛事覆盖</h3>
+        <p>从欧洲主要联赛到亚洲、美洲赛事，时间线与赛程层级清晰。每个比赛日的信息按照联赛、开赛时间、对阵双方进行归类，方便快速定位感兴趣的比赛。</p>
+      </div>
+      <div class="feature-card">
+        <h3>选项与数值透明</h3>
+        <p>每个比赛对应的胜平负、让球、比分等玩法均列出对应的参考数值，并随市场变化动态调整。数值变动本身反映的是整体参与倾向，而非指向结果。</p>
+      </div>
+      <div class="feature-card">
+        <h3>无干扰阅读体验</h3>
+        <p>页面结构以信息呈现为第一目标，减少冗余弹窗与强引导。用户可以根据自己的节奏查看不同比赛，不必被频繁推送打断思路。</p>
+      </div>
+    </div>
+
+    <!-- 引用/提示框：知识型段落 -->
+    <div class="quote-block">
+      “理解一个选项的数值背后有多少人选择，比单纯关注数值高低更有意义。竞彩网提供的基础数据恰好是这种分析习惯的起点。”
+      <cite>—— 一位长期使用竞彩网的体育数据分析爱好者</cite>
+    </div>
+
+    <!-- 使用建议：场景化切入 -->
+    <div class="scenario-wrap">
+      <h2>常见使用场景</h2>
+      <div class="scenario-item">
+        <span class="emoji-placeholder">📋</span>
+        <p><strong>赛前信息整理：</strong> 比赛日之前，通过竞彩网浏览当日全部赛程、联赛分布以及初始数值，可以帮助建立对当日比赛的整体印象，避免临时筛选的匆忙。</p>
+      </div>
+      <div class="scenario-item">
+        <span class="emoji-placeholder">📊</span>
+        <p><strong>数值变化追踪：</strong> 比赛前数小时内，部分比赛的选项数值可能出现波动。观察这些变化趋势并对照球队新闻或伤病信息，可以辅助形成自己的比赛观点。</p>
+      </div>
+      <div class="scenario-item">
+        <span class="emoji-placeholder">🧩</span>
+        <p><strong>复盘与记录：</strong> 赛后重温该场比赛的赛前数值分布、让球设置等，有助于积累对不同赛事类型数值特点的认知，但这种回顾应仅作为个人笔记。</p>
+      </div>
+      <div style="font-size:0.93rem; color:#5f5144; margin-top:0.8rem; background:#ede5da; padding:0.6rem 1rem; border-radius:40px;">
+        ⚡ 提示：任何工具都无法保证结果，竞技体育的不确定性正是其魅力的一部分。
+      </div>
+    </div>
+
+    <!-- 可信且克制的访问说明（嵌入链接） -->
+    <div class="access-note">
+      如果你希望亲自了解这个平台的界面与信息组织方式，可以直接访问 <a href="https://site-mobile-jingcai.com" class="inline-link">竞彩网</a> 。建议在非高峰时段（例如上午或深夜）浏览，页面加载更流畅；同时留意数据刷新会有短暂延迟，属于正常现象。
+    </div>
+
+    <!-- FAQ 摘要（紧凑） -->
+    <div class="faq-mini">
+      <details>
+        <summary>竞彩网上的数值是什么意思？</summary>
+        <p>每个选项旁边的数字代表该选项在当前时刻的综合参考值，由市场整体参与数据计算得出。数值越低说明该选项被选择的集中度越高，但绝不等于该结果出现的概率。请勿将数值与保证挂钩。</p>
+      </details>
+      <details>
+        <summary>页面显示的比赛时间都是当地时间吗？</summary>
+        <p>比赛时间默认以中国标准时间 (UTC+8) 显示。部分特殊赛事（如南美、北美夜间赛事）可能标注为次日凌晨，建议对照具体日期查看。</p>
+      </details>
+      <details>
+        <summary>需要注册才能浏览信息吗？</summary>
+        <p>浏览所有赛事、选项、数值等公开信息均无需注册。部分个性化设置或历史记录功能可能需要账户支持，但核心阅读不受限制。</p>
+      </details>
+    </div>
+
+    <hr>
+    <div class="footer-note">
+      基于公开信息整理 · 内容仅供参考 · 理性看待体育赛事的不确定性
+    </div>
+  </div>
+</body>
+</html>
